@@ -49,7 +49,7 @@ public class TreeSetExample {
 		Student s2 = new Student(46, "mohit", 61);
 		Student s3 = new Student(27, "sobhit", 72);
 		Student s4 = new Student(33, "aman", 56);
-		Student s5 = new Student(20, "rohit", 56);
+		Student s5 = new Student(20, "aman", 67);
 		
 		//
 		
@@ -76,6 +76,22 @@ public class TreeSetExample {
 		treeSetStudent.add(s4);
 		treeSetStudent.add(s5);
 		
+		Set treeSetWithComapartor = new TreeSet(new StudentNameComparator());
+		
+		treeSetWithComapartor.add(s1);
+		treeSetWithComapartor.add(s2);
+		treeSetWithComapartor.add(s3);
+		treeSetWithComapartor.add(s4);
+		treeSetWithComapartor.add(s5);
+		
+		Set treeSetWithWeightComapartor = new TreeSet(new StudentWeightComparator());
+		
+		treeSetWithWeightComapartor.add(s1);
+		treeSetWithWeightComapartor.add(s2);
+		treeSetWithWeightComapartor.add(s3);
+		treeSetWithWeightComapartor.add(s4);
+		treeSetWithWeightComapartor.add(s5);
+		
 		//output
 		
 		System.out.println(hashsetStudent);
@@ -84,9 +100,14 @@ public class TreeSetExample {
 		//		
 		System.out.println(treeSetStudent);
 		
+		System.out.println("Comparator example ******************");
 		
+		System.out.println(treeSetWithComapartor);
 		
+		System.out.println("Comparator example based on weight******************");
 		
+		System.out.println(treeSetWithWeightComapartor);
+			
 		
 
 	}

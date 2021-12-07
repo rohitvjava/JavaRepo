@@ -38,9 +38,11 @@ public class Student implements Comparable <Student>{
 	}
 
 
+	
+
 	@Override
 	public String toString() {
-		return "Student [rollNumber=" + rollNumber + ", name=" + name + "]";
+		return "Student [rollNumber=" + rollNumber + ", name=" + name + ", weight=" + weight + "]";
 	}
 
 
@@ -84,10 +86,10 @@ public class Student implements Comparable <Student>{
 	public int compareTo(Student o) {
 		if(this.getRollNumber()<o.getRollNumber())
 		{
-			return -1;
+			return 1;
 		}else if(this.getRollNumber()>o.getRollNumber())
 		{
-			return 1;
+			return -1;
 		}else{
 			return 0;
 		}
